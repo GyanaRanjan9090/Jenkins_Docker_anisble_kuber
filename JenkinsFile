@@ -1,0 +1,14 @@
+node{
+    stage('Git checkout '){
+    git  'https://github.com/GyanaRanjan9090/Jenkins_Docker_anisble_kuber.git'
+    }
+    
+    //stage('sending docker file to Ansible serverover ssh '){
+        
+       //sshagent (credentials: ['deploy-dev']) {
+         // sh 'ssh -o StrictHostKeyChecking=no team@172.24.1.36' ///var/lib/jenkins/workspace/Kubernetes_ansibel
+       //   sh 'scp /var/lib/jenkins/workspace/Kubernetes_ansibel/*team@172.24.1.36:/home/team/'
+   
+     //  }
+   // }
+}
