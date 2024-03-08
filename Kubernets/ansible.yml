@@ -2,7 +2,7 @@
   become: true
   tasks: 
      - name: create new  deployment
-       command: kubectl delete -f /home/team/DockerDirectory/Deployment.yml
-     - name: delete old service
-       command: kubectl delete -f /home/team/DockerDirectory/Service.yml
+       command: kubectl apply -f /home/team/DockerDirectory/Deployment.yml
+     - name: delete new service
+       command: kubectl apply  -f /home/team/DockerDirectory/Service.yml
      
