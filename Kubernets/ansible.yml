@@ -1,0 +1,8 @@
+- hosts: all
+  become: true
+  tasks: 
+     - name: create new  deployment
+       command: kubectl delete -f /home/team/DockerDirectory/Deployment.yml
+     - name: delete old service
+       command: kubectl delete -f /home/team/DockerDirectory/Service.yml
+     
