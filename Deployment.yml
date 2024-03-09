@@ -1,20 +1,21 @@
+
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: gyana
+  name: gyana
 spec:
-   replicas: 2
-   selector:      # tells the controller which pods to watch/belong to
+  replicas: 2
+  selector:
     matchLabels:
-     app: gyana
-   template:
-      metadata:
-        labels:
-          app: mrdevops
-      spec:
-       containers:
+      app: gyana
+  template:
+    metadata:
+      labels:
+        app: mrdevops
+    spec:
+      containers:
         - name: gyana
           image: gyanaswain09634/ansibel-jenkins
           imagePullPolicy: Always
           ports:
-          - containerPort: 80
+            - containerPort: 80
